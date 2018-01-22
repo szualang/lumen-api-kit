@@ -1,21 +1,8 @@
-# Lumen PHP Framework
+# Lumen PHP API Kit
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
-
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
-
-## Official Documentation
-
-Documentation for the framework can be found on the [Lumen website](http://lumen.laravel.com/docs).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+### 开发配置
+1. git clone项目到本地开发环境。配置nginx或者apache环境。
+2. cp复制一份.env.example 到根目录，重命名为：.env
+3. 修改.env中的数据库配置信息，APP_KEY需要添加一个32位的随机字符串，具体可以在其他laravel项目中使用 php artisan key:generate生成。
+4. 执行 composer install 安装第三方类库包。
+5. 执行php artisan jwt:secret 命令生成jwt的secret
