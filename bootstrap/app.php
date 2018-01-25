@@ -27,6 +27,8 @@ $app->withFacades();
 
 $app->withEloquent();
 
+$app->configure('jwt');
+
 /*
 |--------------------------------------------------------------------------
 | Register Container Bindings
@@ -103,6 +105,7 @@ $app->router->group([
 ], function ($router) {
     require __DIR__.'/../routes/web.php';
     require __DIR__.'/../routes/api/v1.php';
+    require __DIR__.'/../routes/api/v2.php';
 });
 
 return $app;

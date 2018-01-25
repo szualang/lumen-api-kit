@@ -14,3 +14,9 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$api = app('Dingo\Api\Routing\Router');
+$api->version(['v1', 'v2'], ['namespace' => 'App\Http\Controllers'], function($api){
+    //获取token
+    $api->post('auth/token', 'AuthenticateController@authenticate');
+});
